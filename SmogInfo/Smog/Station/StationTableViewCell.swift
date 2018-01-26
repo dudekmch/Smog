@@ -12,12 +12,14 @@ class StationTableViewCell: UITableViewCell {
     
     static let identifier = "StationTableViewCell"
     
+    var stationId = Int()
+    
     let pinFileName = "station_cell_pin"
     
     @IBOutlet weak var stationNameLabel: UILabel!
     @IBOutlet weak var pinImageView: UIImageView!
     
-    func setStationName(name: String){
+    func setTextInStationNameLabel(name: String){
         stationNameLabel.text = name
     }
     
