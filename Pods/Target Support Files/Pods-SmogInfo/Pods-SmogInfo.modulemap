@@ -1,0 +1,6 @@
+framework module Pods_SmogInfo {
+  umbrella header "Pods-SmogInfo-umbrella.h"
+
+  export *
+  module * { export * }
+}
