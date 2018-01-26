@@ -67,7 +67,7 @@ extension StationViewController: UITableViewDataSource, UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: StationTableViewCell.identifier) as! StationTableViewCell
-        cell.textLabel?.text = stationDTOs[indexPath.row].stationName
+        cell.setStationName(name: stationDTOs[indexPath.row].stationName)
         return cell
     }
 

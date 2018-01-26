@@ -10,6 +10,7 @@
 		616654EC41BD1B7183A379FE /* Pods_SmogInfo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32BACB891A6686E0D91CB0D3 /* Pods_SmogInfo.framework */; };
 		F4162B8D201BB21F0040C576 /* StationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4162B8B201BB21F0040C576 /* StationTableViewCell.swift */; };
 		F4162B8E201BB21F0040C576 /* StationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4162B8C201BB21F0040C576 /* StationTableViewCell.xib */; };
+		F4162B94201BBBAD0040C576 /* station_cell_pin.png in Resources */ = {isa = PBXBuildFile; fileRef = F4162B93201BBBAD0040C576 /* station_cell_pin.png */; };
 		F4B30BB2201659D300ECF803 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B30BB1201659D300ECF803 /* AppDelegate.swift */; };
 		F4B30BB4201659D300ECF803 /* StationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B30BB3201659D300ECF803 /* StationViewController.swift */; };
 		F4B30BB7201659D300ECF803 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4B30BB5201659D300ECF803 /* Main.storyboard */; };
@@ -43,6 +44,7 @@
 		EED096E8D861CF7EC5540132 /* Pods-SmogInfo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmogInfo.release.xcconfig"; path = "Pods/Target Support Files/Pods-SmogInfo/Pods-SmogInfo.release.xcconfig"; sourceTree = "<group>"; };
 		F4162B8B201BB21F0040C576 /* StationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationTableViewCell.swift; sourceTree = "<group>"; };
 		F4162B8C201BB21F0040C576 /* StationTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StationTableViewCell.xib; sourceTree = "<group>"; };
+		F4162B93201BBBAD0040C576 /* station_cell_pin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = station_cell_pin.png; sourceTree = "<group>"; };
 		F4B30BAE201659D300ECF803 /* SmogInfo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmogInfo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4B30BB1201659D300ECF803 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F4B30BB3201659D300ECF803 /* StationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationViewController.swift; sourceTree = "<group>"; };
@@ -121,6 +123,7 @@
 			isa = PBXGroup;
 			children = (
 				F4B30BD12017BBDE00ECF803 /* SmogDTO */,
+				F4162B93201BBBAD0040C576 /* station_cell_pin.png */,
 				F4B30BB3201659D300ECF803 /* StationViewController.swift */,
 				F4B30BC620166B8500ECF803 /* SmogRequest.swift */,
 				F4162B8B201BB21F0040C576 /* StationTableViewCell.swift */,
@@ -232,6 +235,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F4162B94201BBBAD0040C576 /* station_cell_pin.png in Resources */,
 				F4B30BBC201659D300ECF803 /* LaunchScreen.storyboard in Resources */,
 				F4B30BB9201659D300ECF803 /* Assets.xcassets in Resources */,
 				F4162B8E201BB21F0040C576 /* StationTableViewCell.xib in Resources */,

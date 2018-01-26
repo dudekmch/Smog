@@ -11,9 +11,19 @@ import UIKit
 class StationTableViewCell: UITableViewCell {
     
     static let identifier = "StationTableViewCell"
-
+    
+    let pinFileName = "station_cell_pin"
+    
+    @IBOutlet weak var stationNameLabel: UILabel!
+    @IBOutlet weak var pinImageView: UIImageView!
+    
+    func setStationName(name: String){
+        stationNameLabel.text = name
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
+        pinImageView.image = UIImage(named: pinFileName)
         // Initialization code
     }
 
@@ -24,3 +34,4 @@ class StationTableViewCell: UITableViewCell {
     }
     
 }
+
