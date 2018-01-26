@@ -14,6 +14,8 @@ class CitiesViewController: UIViewController {
 
     let smogRequest = SmogRequest()
 
+    let textForrows = ["A", "B", "C", "D", "E", "F"]
+
     let countOfSection = 1
     let sectionHeaderText = "Cities"
     var stationDTOs = [StationDTO]()
@@ -53,7 +55,7 @@ extension CitiesViewController: UITableViewDataSource, UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cityCell", for: indexPath) as! UITableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! UITableViewCell
         cell.textLabel?.text = stationDTOs[indexPath.row].stationName
         return cell
     }
