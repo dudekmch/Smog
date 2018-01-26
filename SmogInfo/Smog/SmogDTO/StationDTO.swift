@@ -13,7 +13,7 @@ struct StationDTO: Decodable {
 //    let addressStreet : String?
 //    let gegrLat : String
 //    let gegrLon : String
-//    let id : Int
+    let id : Int
     let stationName : String
 
 }

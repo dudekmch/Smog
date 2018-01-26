@@ -9,11 +9,10 @@
 /* Begin PBXBuildFile section */
 		616654EC41BD1B7183A379FE /* Pods_SmogInfo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32BACB891A6686E0D91CB0D3 /* Pods_SmogInfo.framework */; };
 		F4B30BB2201659D300ECF803 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B30BB1201659D300ECF803 /* AppDelegate.swift */; };
-		F4B30BB4201659D300ECF803 /* CitiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B30BB3201659D300ECF803 /* CitiesViewController.swift */; };
+		F4B30BB4201659D300ECF803 /* StationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B30BB3201659D300ECF803 /* StationViewController.swift */; };
 		F4B30BB7201659D300ECF803 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4B30BB5201659D300ECF803 /* Main.storyboard */; };
 		F4B30BB9201659D300ECF803 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4B30BB8201659D300ECF803 /* Assets.xcassets */; };
 		F4B30BBC201659D300ECF803 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4B30BBA201659D300ECF803 /* LaunchScreen.storyboard */; };
-		F4B30BC42016646C00ECF803 /* CitiesInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B30BC32016646C00ECF803 /* CitiesInteractor.swift */; };
 		F4B30BC720166B8500ECF803 /* SmogRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B30BC620166B8500ECF803 /* SmogRequest.swift */; };
 		F4B30BD52017BC2A00ECF803 /* CityDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B30BD42017BC2A00ECF803 /* CityDTO.swift */; };
 		F4B30BD72017BDE600ECF803 /* StationDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B30BD62017BDE600ECF803 /* StationDTO.swift */; };
@@ -42,12 +41,11 @@
 		EED096E8D861CF7EC5540132 /* Pods-SmogInfo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmogInfo.release.xcconfig"; path = "Pods/Target Support Files/Pods-SmogInfo/Pods-SmogInfo.release.xcconfig"; sourceTree = "<group>"; };
 		F4B30BAE201659D300ECF803 /* SmogInfo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmogInfo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4B30BB1201659D300ECF803 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F4B30BB3201659D300ECF803 /* CitiesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitiesViewController.swift; sourceTree = "<group>"; };
+		F4B30BB3201659D300ECF803 /* StationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationViewController.swift; sourceTree = "<group>"; };
 		F4B30BB6201659D300ECF803 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F4B30BB8201659D300ECF803 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F4B30BBB201659D300ECF803 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F4B30BBD201659D300ECF803 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F4B30BC32016646C00ECF803 /* CitiesInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitiesInteractor.swift; sourceTree = "<group>"; };
 		F4B30BC620166B8500ECF803 /* SmogRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmogRequest.swift; sourceTree = "<group>"; };
 		F4B30BC820168B1400ECF803 /* Pods.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Pods.xcodeproj; path = Pods/Pods.xcodeproj; sourceTree = "<group>"; };
 		F4B30BD42017BC2A00ECF803 /* CityDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityDTO.swift; sourceTree = "<group>"; };
@@ -119,8 +117,7 @@
 			isa = PBXGroup;
 			children = (
 				F4B30BD12017BBDE00ECF803 /* SmogDTO */,
-				F4B30BC32016646C00ECF803 /* CitiesInteractor.swift */,
-				F4B30BB3201659D300ECF803 /* CitiesViewController.swift */,
+				F4B30BB3201659D300ECF803 /* StationViewController.swift */,
 				F4B30BC620166B8500ECF803 /* SmogRequest.swift */,
 			);
 			path = Smog;
@@ -297,9 +294,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				F4B30BD52017BC2A00ECF803 /* CityDTO.swift in Sources */,
-				F4B30BB4201659D300ECF803 /* CitiesViewController.swift in Sources */,
+				F4B30BB4201659D300ECF803 /* StationViewController.swift in Sources */,
 				F4B30BB2201659D300ECF803 /* AppDelegate.swift in Sources */,
-				F4B30BC42016646C00ECF803 /* CitiesInteractor.swift in Sources */,
 				F4B30BD72017BDE600ECF803 /* StationDTO.swift in Sources */,
 				F4B30BC720166B8500ECF803 /* SmogRequest.swift in Sources */,
 			);
