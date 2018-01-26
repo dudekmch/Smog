@@ -24,6 +24,7 @@ class StationViewController: UIViewController {
         tableView.dataSource = self
         tableView.delegate = self
         smogRequest.getAllStation(success: { data in self.prepareStationDtoListFrom(data: data) }, failure: { (error) in print(error!) })
+        registerNib()
     }
 
     fileprivate func prepareStationDtoListFrom(data: Data) {
@@ -46,6 +47,11 @@ class StationViewController: UIViewController {
 
 extension StationViewController: UITableViewDataSource, UITableViewDelegate {
 
+    fileprivate func registerNib() {
+        let nib = UINib(nibName: StationTableViewCell.identifier, bundle: nil)
+        tableView.register(nib, forCellReuseIdentifier: StationTableViewCell.identifier)
+    }
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return stationDTOs.count
     }
@@ -60,8 +66,7 @@ extension StationViewController: UITableViewDataSource, UITableViewDelegate {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: StationTableViewCell.identifier) as! StationTableViewCell
         cell.textLabel?.text = stationDTOs[indexPath.row].stationName
         return cell
     }
