@@ -12,7 +12,7 @@ class MeasurementPointViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
 
-    var smogLevel = String()
+    var airQuality = String()
     var stationNameHeaderText = String()
     var stationId = Int()
     var measurementPointDTOs = [MeasurementPointDTO]()
@@ -30,7 +30,7 @@ class MeasurementPointViewController: UIViewController {
 
     fileprivate func prepareSmogLevelDtoFrom(_ data: Data) {
         do {
-            self.smogLevel = (try JSONDecoder().decode(SmogLevelDTO.self, from: data)).stIndexLevel.indexLevelName
+            self.airQuality = (try JSONDecoder().decode(SmogLevelDTO.self, from: data)).stIndexLevel.indexLevelName
             self.tableView.reloadData()
         } catch {
             print(error)
@@ -76,7 +76,7 @@ extension MeasurementPointViewController: UITableViewDataSource, UITableViewDele
     }
 
     func tableView(_ tableView: UITableView, titleForFooterInSection section: Int) -> String? {
-        return setSmogLevelTextFooter(level: smogLevel)
+        return setSmogLevelTextFooter(level: airQuality)
     }
 
 
