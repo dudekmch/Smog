@@ -31,14 +31,14 @@ class StationViewController: UIViewController {
     fileprivate func prepareStationDtoListFrom(data: Data) {
         do {
             self.stationDTOs = (try JSONDecoder().decode([StationDTO].self, from: data))
-            sortASCStationList()
+            sortASCList()
             self.tableView.reloadData()
         } catch {
             print(error)
         }
     }
 
-    fileprivate func sortASCStationList() {
+    fileprivate func sortASCList() {
         self.stationDTOs = self.stationDTOs.sorted(by: { (this: StationDTO, that: StationDTO) -> Bool in
             return (that.stationName > this.stationName)
         })
@@ -69,8 +69,7 @@ extension StationViewController: UITableViewDataSource, UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: StationTableViewCell.identifier) as! StationTableViewCell
-        cell.setTextInStationNameLabel(name: stationDTOs[indexPath.row].stationName)
-        cell.stationId = stationDTOs[indexPath.row].id
+        cell.setDataForStationWith(id: stationDTOs[indexPath.row].id, name: stationDTOs[indexPath.row].stationName)
         return cell
     }
 
@@ -84,6 +83,7 @@ extension StationViewController: UITableViewDataSource, UITableViewDelegate {
             let stationIndex = tableView.indexPathForSelectedRow
             {
             destination.stationId = (tableView.cellForRow(at: stationIndex) as! StationTableViewCell).stationId
+            destination.stationNameHeaderText = (tableView.cellForRow(at: stationIndex) as! StationTableViewCell).stationName
         }
     }
 

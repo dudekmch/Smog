@@ -12,13 +12,17 @@
 		F4162B8E201BB21F0040C576 /* StationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4162B8C201BB21F0040C576 /* StationTableViewCell.xib */; };
 		F4162B94201BBBAD0040C576 /* station_cell_pin.png in Resources */ = {isa = PBXBuildFile; fileRef = F4162B93201BBBAD0040C576 /* station_cell_pin.png */; };
 		F4162B9F201BBFB20040C576 /* MeasurementPointViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4162B9E201BBFB20040C576 /* MeasurementPointViewController.swift */; };
+		F4162BA4201C6C010040C576 /* IdentifiableDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4162BA3201C6C010040C576 /* IdentifiableDTO.swift */; };
+		F4162BA6201C76210040C576 /* MeasurementPointDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4162BA5201C76210040C576 /* MeasurementPointDTO.swift */; };
+		F4162BA8201C78A40040C576 /* ParamDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4162BA7201C78A40040C576 /* ParamDTO.swift */; };
+		F4162BAB201C7CD60040C576 /* MeasurementPointTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4162BA9201C7CD60040C576 /* MeasurementPointTableViewCell.swift */; };
+		F4162BAC201C7CD60040C576 /* MeasurementPointTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4162BAA201C7CD60040C576 /* MeasurementPointTableViewCell.xib */; };
 		F4B30BB2201659D300ECF803 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B30BB1201659D300ECF803 /* AppDelegate.swift */; };
 		F4B30BB4201659D300ECF803 /* StationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B30BB3201659D300ECF803 /* StationViewController.swift */; };
 		F4B30BB7201659D300ECF803 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4B30BB5201659D300ECF803 /* Main.storyboard */; };
 		F4B30BB9201659D300ECF803 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4B30BB8201659D300ECF803 /* Assets.xcassets */; };
 		F4B30BBC201659D300ECF803 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4B30BBA201659D300ECF803 /* LaunchScreen.storyboard */; };
 		F4B30BC720166B8500ECF803 /* SmogRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B30BC620166B8500ECF803 /* SmogRequest.swift */; };
-		F4B30BD52017BC2A00ECF803 /* CityDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B30BD42017BC2A00ECF803 /* CityDTO.swift */; };
 		F4B30BD72017BDE600ECF803 /* StationDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B30BD62017BDE600ECF803 /* StationDTO.swift */; };
 /* End PBXBuildFile section */
 
@@ -47,6 +51,11 @@
 		F4162B8C201BB21F0040C576 /* StationTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StationTableViewCell.xib; sourceTree = "<group>"; };
 		F4162B93201BBBAD0040C576 /* station_cell_pin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = station_cell_pin.png; sourceTree = "<group>"; };
 		F4162B9E201BBFB20040C576 /* MeasurementPointViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasurementPointViewController.swift; sourceTree = "<group>"; };
+		F4162BA3201C6C010040C576 /* IdentifiableDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdentifiableDTO.swift; sourceTree = "<group>"; };
+		F4162BA5201C76210040C576 /* MeasurementPointDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasurementPointDTO.swift; sourceTree = "<group>"; };
+		F4162BA7201C78A40040C576 /* ParamDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParamDTO.swift; sourceTree = "<group>"; };
+		F4162BA9201C7CD60040C576 /* MeasurementPointTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasurementPointTableViewCell.swift; sourceTree = "<group>"; };
+		F4162BAA201C7CD60040C576 /* MeasurementPointTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MeasurementPointTableViewCell.xib; sourceTree = "<group>"; };
 		F4B30BAE201659D300ECF803 /* SmogInfo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmogInfo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4B30BB1201659D300ECF803 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F4B30BB3201659D300ECF803 /* StationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationViewController.swift; sourceTree = "<group>"; };
@@ -56,7 +65,6 @@
 		F4B30BBD201659D300ECF803 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F4B30BC620166B8500ECF803 /* SmogRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmogRequest.swift; sourceTree = "<group>"; };
 		F4B30BC820168B1400ECF803 /* Pods.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Pods.xcodeproj; path = Pods/Pods.xcodeproj; sourceTree = "<group>"; };
-		F4B30BD42017BC2A00ECF803 /* CityDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityDTO.swift; sourceTree = "<group>"; };
 		F4B30BD62017BDE600ECF803 /* StationDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationDTO.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -96,6 +104,7 @@
 				F4B30BB3201659D300ECF803 /* StationViewController.swift */,
 				F4162B8B201BB21F0040C576 /* StationTableViewCell.swift */,
 				F4162B8C201BB21F0040C576 /* StationTableViewCell.xib */,
+				F4B30BD62017BDE600ECF803 /* StationDTO.swift */,
 			);
 			path = Station;
 			sourceTree = "<group>";
@@ -104,8 +113,21 @@
 			isa = PBXGroup;
 			children = (
 				F4162B9E201BBFB20040C576 /* MeasurementPointViewController.swift */,
+				F4162BA5201C76210040C576 /* MeasurementPointDTO.swift */,
+				F4162BA7201C78A40040C576 /* ParamDTO.swift */,
+				F4162BA9201C7CD60040C576 /* MeasurementPointTableViewCell.swift */,
+				F4162BAA201C7CD60040C576 /* MeasurementPointTableViewCell.xib */,
 			);
 			path = MeasurementPoint;
+			sourceTree = "<group>";
+		};
+		F4162BA0201C65480040C576 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				F4B30BC620166B8500ECF803 /* SmogRequest.swift */,
+				F4162BA3201C6C010040C576 /* IdentifiableDTO.swift */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 		F4B30BA5201659D300ECF803 = {
@@ -143,10 +165,9 @@
 		F4B30BC520166AFF00ECF803 /* Smog */ = {
 			isa = PBXGroup;
 			children = (
+				F4162BA0201C65480040C576 /* Common */,
 				F4162B9D201BBF520040C576 /* MeasurementPoint */,
 				F4162B9C201BBEF50040C576 /* Station */,
-				F4B30BD12017BBDE00ECF803 /* SmogDTO */,
-				F4B30BC620166B8500ECF803 /* SmogRequest.swift */,
 			);
 			path = Smog;
 			sourceTree = "<group>";
@@ -158,15 +179,6 @@
 				F4B30BD020168B1400ECF803 /* Pods_SmogInfo.framework */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		F4B30BD12017BBDE00ECF803 /* SmogDTO */ = {
-			isa = PBXGroup;
-			children = (
-				F4B30BD42017BC2A00ECF803 /* CityDTO.swift */,
-				F4B30BD62017BDE600ECF803 /* StationDTO.swift */,
-			);
-			path = SmogDTO;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,6 +271,7 @@
 				F4B30BB9201659D300ECF803 /* Assets.xcassets in Resources */,
 				F4162B8E201BB21F0040C576 /* StationTableViewCell.xib in Resources */,
 				F4B30BB7201659D300ECF803 /* Main.storyboard in Resources */,
+				F4162BAC201C7CD60040C576 /* MeasurementPointTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -323,11 +336,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F4B30BD52017BC2A00ECF803 /* CityDTO.swift in Sources */,
 				F4B30BB4201659D300ECF803 /* StationViewController.swift in Sources */,
 				F4162B9F201BBFB20040C576 /* MeasurementPointViewController.swift in Sources */,
 				F4162B8D201BB21F0040C576 /* StationTableViewCell.swift in Sources */,
+				F4162BA6201C76210040C576 /* MeasurementPointDTO.swift in Sources */,
 				F4B30BB2201659D300ECF803 /* AppDelegate.swift in Sources */,
+				F4162BA4201C6C010040C576 /* IdentifiableDTO.swift in Sources */,
+				F4162BA8201C78A40040C576 /* ParamDTO.swift in Sources */,
+				F4162BAB201C7CD60040C576 /* MeasurementPointTableViewCell.swift in Sources */,
 				F4B30BD72017BDE600ECF803 /* StationDTO.swift in Sources */,
 				F4B30BC720166B8500ECF803 /* SmogRequest.swift in Sources */,
 			);
