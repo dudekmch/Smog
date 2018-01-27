@@ -17,6 +17,8 @@
 		F4162BA8201C78A40040C576 /* ParamDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4162BA7201C78A40040C576 /* ParamDTO.swift */; };
 		F4162BAB201C7CD60040C576 /* MeasurementPointTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4162BA9201C7CD60040C576 /* MeasurementPointTableViewCell.swift */; };
 		F4162BAC201C7CD60040C576 /* MeasurementPointTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4162BAA201C7CD60040C576 /* MeasurementPointTableViewCell.xib */; };
+		F4162BAE201C8B2C0040C576 /* SmogLevelDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4162BAD201C8B2B0040C576 /* SmogLevelDTO.swift */; };
+		F4162BB0201C8B760040C576 /* LevelDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4162BAF201C8B760040C576 /* LevelDTO.swift */; };
 		F4B30BB2201659D300ECF803 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B30BB1201659D300ECF803 /* AppDelegate.swift */; };
 		F4B30BB4201659D300ECF803 /* StationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B30BB3201659D300ECF803 /* StationViewController.swift */; };
 		F4B30BB7201659D300ECF803 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4B30BB5201659D300ECF803 /* Main.storyboard */; };
@@ -56,6 +58,8 @@
 		F4162BA7201C78A40040C576 /* ParamDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParamDTO.swift; sourceTree = "<group>"; };
 		F4162BA9201C7CD60040C576 /* MeasurementPointTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasurementPointTableViewCell.swift; sourceTree = "<group>"; };
 		F4162BAA201C7CD60040C576 /* MeasurementPointTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MeasurementPointTableViewCell.xib; sourceTree = "<group>"; };
+		F4162BAD201C8B2B0040C576 /* SmogLevelDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmogLevelDTO.swift; sourceTree = "<group>"; };
+		F4162BAF201C8B760040C576 /* LevelDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelDTO.swift; sourceTree = "<group>"; };
 		F4B30BAE201659D300ECF803 /* SmogInfo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmogInfo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4B30BB1201659D300ECF803 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F4B30BB3201659D300ECF803 /* StationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationViewController.swift; sourceTree = "<group>"; };
@@ -112,9 +116,8 @@
 		F4162B9D201BBF520040C576 /* MeasurementPoint */ = {
 			isa = PBXGroup;
 			children = (
+				F4162BB1201C8C170040C576 /* DTO */,
 				F4162B9E201BBFB20040C576 /* MeasurementPointViewController.swift */,
-				F4162BA5201C76210040C576 /* MeasurementPointDTO.swift */,
-				F4162BA7201C78A40040C576 /* ParamDTO.swift */,
 				F4162BA9201C7CD60040C576 /* MeasurementPointTableViewCell.swift */,
 				F4162BAA201C7CD60040C576 /* MeasurementPointTableViewCell.xib */,
 			);
@@ -128,6 +131,17 @@
 				F4162BA3201C6C010040C576 /* IdentifiableDTO.swift */,
 			);
 			path = Common;
+			sourceTree = "<group>";
+		};
+		F4162BB1201C8C170040C576 /* DTO */ = {
+			isa = PBXGroup;
+			children = (
+				F4162BA5201C76210040C576 /* MeasurementPointDTO.swift */,
+				F4162BA7201C78A40040C576 /* ParamDTO.swift */,
+				F4162BAD201C8B2B0040C576 /* SmogLevelDTO.swift */,
+				F4162BAF201C8B760040C576 /* LevelDTO.swift */,
+			);
+			path = DTO;
 			sourceTree = "<group>";
 		};
 		F4B30BA5201659D300ECF803 = {
@@ -337,8 +351,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				F4B30BB4201659D300ECF803 /* StationViewController.swift in Sources */,
+				F4162BAE201C8B2C0040C576 /* SmogLevelDTO.swift in Sources */,
 				F4162B9F201BBFB20040C576 /* MeasurementPointViewController.swift in Sources */,
 				F4162B8D201BB21F0040C576 /* StationTableViewCell.swift in Sources */,
+				F4162BB0201C8B760040C576 /* LevelDTO.swift in Sources */,
 				F4162BA6201C76210040C576 /* MeasurementPointDTO.swift in Sources */,
 				F4B30BB2201659D300ECF803 /* AppDelegate.swift in Sources */,
 				F4162BA4201C6C010040C576 /* IdentifiableDTO.swift in Sources */,
