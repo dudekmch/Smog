@@ -16,8 +16,14 @@ class MeasurementPointViewController: UIViewController {
     var stationNameHeaderText = String()
     var stationId = Int()
     var measurementPointDTOs = [MeasurementPointDTO]()
+    var valuesFromMeasurementPointSensors = [Int: SensorDataDTO]()
     let smogRequest = SmogRequest()
     let countOfSection = 1
+    let constantPartTextFooter = "Wskaźnik jakości powietrza: "
+    let valueFromSensorFormatter = "%.1f"
+    let coSensorKey = "CO"
+    let coValueUnit = "ug/m3"
+    let generalValueUnit = "mg/m3"
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,7 +31,25 @@ class MeasurementPointViewController: UIViewController {
         tableView.dataSource = self
         registerNib()
         smogRequest.getMeasurementPointsForStationWith(id: stationId, success: { data in self.prepareMeasurementPointDtoListFrom(data) }, failure: { (error) in print(error!) })
-        smogRequest.getSmogLevelForStationWith(id: stationId, success: { data in self.prepareSmogLevelDtoFrom(data)}, failure: { (error) in print(error!)})
+        smogRequest.getSmogLevelForStationWith(id: stationId, success: { data in self.prepareSmogLevelDtoFrom(data) }, failure: { (error) in print(error!) })
+    }
+
+    fileprivate func getDataFromMeasurementPoints() {
+        for point in measurementPointDTOs {
+            smogRequest.getDataFromMeasurementPointWith(id: point.id, success: { data in self.prepareSensorDataDtoFrom(data, forMeasurementPointWithId: point.id) }, failure: { (error) in print(error!) })
+        }
+    }
+
+    fileprivate func prepareSensorDataDtoFrom(_ data: Data, forMeasurementPointWithId id: Int) {
+        do {
+            var sensorData = (try JSONDecoder().decode(SensorDataDTO.self, from: data))
+            sensorData = removeEmptyValueFrom(data: sensorData)
+            valuesFromMeasurementPointSensors[id] = sensorData
+            self.tableView.reloadData()
+        } catch {
+            print(error)
+        }
+
     }
 
     fileprivate func prepareSmogLevelDtoFrom(_ data: Data) {
@@ -40,21 +64,44 @@ class MeasurementPointViewController: UIViewController {
     fileprivate func prepareMeasurementPointDtoListFrom(_ data: Data) {
         do {
             self.measurementPointDTOs = (try JSONDecoder().decode([MeasurementPointDTO].self, from: data))
-            sortASCList()
+            sortMeasurementPointASCList()
             self.tableView.reloadData()
+            getDataFromMeasurementPoints()
         } catch {
             print(error)
         }
     }
 
-    fileprivate func sortASCList() {
+    fileprivate func sortMeasurementPointASCList() {
         self.measurementPointDTOs = self.measurementPointDTOs.sorted(by: { (this: MeasurementPointDTO, that: MeasurementPointDTO) -> Bool in
             return (that.param.paramName > this.param.paramName)
         })
     }
 
     fileprivate func setSmogLevelTextFooter(level: String) -> String {
-        return "Wskaźnik jakości powietrza: \(level)"
+        return constantPartTextFooter + level
+    }
+
+    fileprivate func removeEmptyValueFrom(data: SensorDataDTO) -> SensorDataDTO {
+        var filtredValues = [SensorDataDTO.ValueDTO]()
+        if var valuesForPoint = data.values {
+            filtredValues = valuesForPoint.filter({ (pointValue) -> Bool in
+                pointValue.value != nil
+            })
+        }
+        return (SensorDataDTO(key: data.key, values: filtredValues))
+    }
+
+    fileprivate func prepareValue(value: SensorDataDTO) -> String {
+        //TODO: wtf !! value.values![0].value!
+        var formattedValue = String(format: valueFromSensorFormatter, value.values![0].value!)
+        if value.key == coSensorKey {
+            formattedValue = formattedValue + " " + coValueUnit
+            return formattedValue
+        } else {
+            formattedValue = formattedValue + " " + generalValueUnit
+            return formattedValue
+        }
     }
 
 }
@@ -86,21 +133,22 @@ extension MeasurementPointViewController: UITableViewDataSource, UITableViewDele
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: MeasurementPointTableViewCell.identifier) as! MeasurementPointTableViewCell
-        cell.setDataMeasurementPoint(with: measurementPointDTOs[indexPath.row].id, name: measurementPointDTOs[indexPath.row].param.paramName, formula: measurementPointDTOs[indexPath.row].param.paramFormula)
+
+        if let data = valuesFromMeasurementPointSensors[measurementPointDTOs[indexPath.row].id] {
+            prepareCellWithValue(cell, indexPath, data)
+        } else {
+            prepareCellWithOutValue(cell, indexPath)
+        }
+
         return cell
     }
 
-//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        performSegue(withIdentifier: measurementPointSegueIdentifier, sender: self)
-//    }
-//
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if segue.identifier == measurementPointSegueIdentifier,
-//            let destination = segue.destination as? MeasurementPointViewController,
-//            let stationIndex = tableView.indexPathForSelectedRow
-//        {
-//            destination.stationId = (tableView.cellForRow(at: stationIndex) as! StationTableViewCell).stationId
-//        }
-//    }
+    fileprivate func prepareCellWithValue(_ cell: MeasurementPointTableViewCell, _ indexPath: IndexPath, _ data: SensorDataDTO) {
+        cell.setDataMeasurementPoint(with: measurementPointDTOs[indexPath.row].id, name: measurementPointDTOs[indexPath.row].param.paramName, formula: measurementPointDTOs[indexPath.row].param.paramFormula, value: prepareValue(value: data))
+    }
+
+    fileprivate func prepareCellWithOutValue(_ cell: MeasurementPointTableViewCell, _ indexPath: IndexPath) {
+        cell.setDataMeasurementPoint(with: measurementPointDTOs[indexPath.row].id, name: measurementPointDTOs[indexPath.row].param.paramName, formula: measurementPointDTOs[indexPath.row].param.paramFormula)
+    }
 
 }

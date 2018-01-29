@@ -36,8 +36,8 @@ class SmogRequest {
             }
         }
     }
-    
-    func getSmogLevelForStationWith(id: Int, success: @escaping (_ response: Data) -> Void, failure: @escaping (_ error: NSError?) -> Void){
+
+    func getSmogLevelForStationWith(id: Int, success: @escaping (_ response: Data) -> Void, failure: @escaping (_ error: NSError?) -> Void) {
         Alamofire.request("http://api.gios.gov.pl/pjp-api/rest/aqindex/getIndex/\(id)").responseJSON { response in
             switch response.result
             {
@@ -48,6 +48,21 @@ class SmogRequest {
             }
         }
     }
+
+    func getDataFromMeasurementPointWith(id: Int, success: @escaping (_ response: Data) -> Void, failure: @escaping (_ error: NSError?) -> Void) {
+        Alamofire.request("http://api.gios.gov.pl/pjp-api/rest/data/getData/\(id)").responseJSON { response in
+
+            switch response.result
+            {
+            case .success:
+                success(response.data!)
+            case .failure(let error):
+                failure(error as NSError)
+            }
+        }
+
+    }
+
 }
 
 

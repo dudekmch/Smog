@@ -12,26 +12,29 @@ class MeasurementPointTableViewCell: UITableViewCell {
 
     @IBOutlet weak var paramFormulaLabel: UILabel!
     @IBOutlet weak var paramNameLabel: UILabel!
+    @IBOutlet weak var sensorValueLabel: UILabel!
     
     static let identifier = "MeasurementPointTableViewCell"
     
     var pointId = Int()
     var paramName = String()
     var paramFormula = String()
+    var sensorValue = String()
     
     override func awakeFromNib() {
         super.awakeFromNib()
         
     }
     
-    func setDataMeasurementPoint(with id: Int, name: String, formula: String){
+    func setDataMeasurementPoint(with id: Int, name: String, formula: String, value: String = "N/A"){
         pointId = id
-        setParamData(name.capitalized, formula)
+        setParamData(name.capitalized, formula, value)
     }
     
-    fileprivate func setParamData(_ name: String,_ formula: String){
+    fileprivate func setParamData(_ name: String,_ formula: String, _ value: String){
         setParamFormula(formula)
         setParamName(name)
+        setSensorValue(value)
     }
     
     fileprivate func setParamFormula(_ formula: String){
@@ -42,6 +45,16 @@ class MeasurementPointTableViewCell: UITableViewCell {
     fileprivate func setParamFormulaLabel(_ text: String){
         paramFormulaLabel.text = text
     }
+    
+    fileprivate func setSensorValue(_ value: String){
+        sensorValue = value
+        setSensorValueLabel(value)
+    }
+    
+    fileprivate func setSensorValueLabel(_ text: String){
+        sensorValueLabel.text = text
+    }
+
     
     fileprivate func setParamName(_ name: String){
         paramName = name

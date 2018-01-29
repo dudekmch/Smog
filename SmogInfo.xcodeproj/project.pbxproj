@@ -19,6 +19,7 @@
 		F4162BAC201C7CD60040C576 /* MeasurementPointTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4162BAA201C7CD60040C576 /* MeasurementPointTableViewCell.xib */; };
 		F4162BAE201C8B2C0040C576 /* SmogLevelDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4162BAD201C8B2B0040C576 /* SmogLevelDTO.swift */; };
 		F4162BB0201C8B760040C576 /* LevelDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4162BAF201C8B760040C576 /* LevelDTO.swift */; };
+		F4162BB3201F97730040C576 /* SensorDataDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4162BB2201F97730040C576 /* SensorDataDTO.swift */; };
 		F4B30BB2201659D300ECF803 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B30BB1201659D300ECF803 /* AppDelegate.swift */; };
 		F4B30BB4201659D300ECF803 /* StationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B30BB3201659D300ECF803 /* StationViewController.swift */; };
 		F4B30BB7201659D300ECF803 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4B30BB5201659D300ECF803 /* Main.storyboard */; };
@@ -60,6 +61,7 @@
 		F4162BAA201C7CD60040C576 /* MeasurementPointTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MeasurementPointTableViewCell.xib; sourceTree = "<group>"; };
 		F4162BAD201C8B2B0040C576 /* SmogLevelDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmogLevelDTO.swift; sourceTree = "<group>"; };
 		F4162BAF201C8B760040C576 /* LevelDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelDTO.swift; sourceTree = "<group>"; };
+		F4162BB2201F97730040C576 /* SensorDataDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorDataDTO.swift; sourceTree = "<group>"; };
 		F4B30BAE201659D300ECF803 /* SmogInfo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmogInfo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4B30BB1201659D300ECF803 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F4B30BB3201659D300ECF803 /* StationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationViewController.swift; sourceTree = "<group>"; };
@@ -140,6 +142,7 @@
 				F4162BA7201C78A40040C576 /* ParamDTO.swift */,
 				F4162BAD201C8B2B0040C576 /* SmogLevelDTO.swift */,
 				F4162BAF201C8B760040C576 /* LevelDTO.swift */,
+				F4162BB2201F97730040C576 /* SensorDataDTO.swift */,
 			);
 			path = DTO;
 			sourceTree = "<group>";
@@ -351,6 +354,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F4B30BB4201659D300ECF803 /* StationViewController.swift in Sources */,
+				F4162BB3201F97730040C576 /* SensorDataDTO.swift in Sources */,
 				F4162BAE201C8B2C0040C576 /* SmogLevelDTO.swift in Sources */,
 				F4162B9F201BBFB20040C576 /* MeasurementPointViewController.swift in Sources */,
 				F4162B8D201BB21F0040C576 /* StationTableViewCell.swift in Sources */,
