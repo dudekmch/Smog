@@ -20,6 +20,10 @@
 		F4162BAE201C8B2C0040C576 /* SmogLevelDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4162BAD201C8B2B0040C576 /* SmogLevelDTO.swift */; };
 		F4162BB0201C8B760040C576 /* LevelDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4162BAF201C8B760040C576 /* LevelDTO.swift */; };
 		F4162BB3201F97730040C576 /* SensorDataDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4162BB2201F97730040C576 /* SensorDataDTO.swift */; };
+		F4162BBE202079600040C576 /* ValueDataDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4162BBD202079600040C576 /* ValueDataDTO.swift */; };
+		F42C1560202108CD00D1D745 /* BarChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42C155F202108CD00D1D745 /* BarChartViewController.swift */; };
+		F42C1565202123BE00D1D745 /* DateValueFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42C1564202123BE00D1D745 /* DateValueFormatter.swift */; };
+		F4442D012020F9F200D7D8A0 /* SmogInfoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4442D002020F9F200D7D8A0 /* SmogInfoTests.swift */; };
 		F4B30BB2201659D300ECF803 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B30BB1201659D300ECF803 /* AppDelegate.swift */; };
 		F4B30BB4201659D300ECF803 /* StationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B30BB3201659D300ECF803 /* StationViewController.swift */; };
 		F4B30BB7201659D300ECF803 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4B30BB5201659D300ECF803 /* Main.storyboard */; };
@@ -30,6 +34,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		F4162BB9202077660040C576 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F4B30BC820168B1400ECF803 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 30A44A5D302134160FDA99457636FE21;
+			remoteInfo = Charts;
+		};
+		F4442D032020F9F200D7D8A0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F4B30BA6201659D300ECF803 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F4B30BAD201659D300ECF803;
+			remoteInfo = SmogInfo;
+		};
 		F4B30BCD20168B1400ECF803 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = F4B30BC820168B1400ECF803 /* Pods.xcodeproj */;
@@ -62,6 +80,12 @@
 		F4162BAD201C8B2B0040C576 /* SmogLevelDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmogLevelDTO.swift; sourceTree = "<group>"; };
 		F4162BAF201C8B760040C576 /* LevelDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelDTO.swift; sourceTree = "<group>"; };
 		F4162BB2201F97730040C576 /* SensorDataDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorDataDTO.swift; sourceTree = "<group>"; };
+		F4162BBD202079600040C576 /* ValueDataDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValueDataDTO.swift; sourceTree = "<group>"; };
+		F42C155F202108CD00D1D745 /* BarChartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarChartViewController.swift; sourceTree = "<group>"; };
+		F42C1564202123BE00D1D745 /* DateValueFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateValueFormatter.swift; sourceTree = "<group>"; };
+		F4442CFE2020F9F100D7D8A0 /* SmogInfoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SmogInfoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F4442D002020F9F200D7D8A0 /* SmogInfoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmogInfoTests.swift; sourceTree = "<group>"; };
+		F4442D022020F9F200D7D8A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F4B30BAE201659D300ECF803 /* SmogInfo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmogInfo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4B30BB1201659D300ECF803 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F4B30BB3201659D300ECF803 /* StationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationViewController.swift; sourceTree = "<group>"; };
@@ -75,6 +99,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		F4442CFB2020F9F100D7D8A0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F4B30BAB201659D300ECF803 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -143,8 +174,27 @@
 				F4162BAD201C8B2B0040C576 /* SmogLevelDTO.swift */,
 				F4162BAF201C8B760040C576 /* LevelDTO.swift */,
 				F4162BB2201F97730040C576 /* SensorDataDTO.swift */,
+				F4162BBD202079600040C576 /* ValueDataDTO.swift */,
 			);
 			path = DTO;
+			sourceTree = "<group>";
+		};
+		F4162BB5202077660040C576 /* Chart */ = {
+			isa = PBXGroup;
+			children = (
+				F42C155F202108CD00D1D745 /* BarChartViewController.swift */,
+				F42C1564202123BE00D1D745 /* DateValueFormatter.swift */,
+			);
+			path = Chart;
+			sourceTree = "<group>";
+		};
+		F4442CFF2020F9F200D7D8A0 /* SmogInfoTests */ = {
+			isa = PBXGroup;
+			children = (
+				F4442D002020F9F200D7D8A0 /* SmogInfoTests.swift */,
+				F4442D022020F9F200D7D8A0 /* Info.plist */,
+			);
+			path = SmogInfoTests;
 			sourceTree = "<group>";
 		};
 		F4B30BA5201659D300ECF803 = {
@@ -152,6 +202,7 @@
 			children = (
 				F4B30BC820168B1400ECF803 /* Pods.xcodeproj */,
 				F4B30BB0201659D300ECF803 /* SmogInfo */,
+				F4442CFF2020F9F200D7D8A0 /* SmogInfoTests */,
 				F4B30BAF201659D300ECF803 /* Products */,
 				39C5C86D3E5932837FEBF401 /* Pods */,
 				66A950AE7021B8C4E067F944 /* Frameworks */,
@@ -162,6 +213,7 @@
 			isa = PBXGroup;
 			children = (
 				F4B30BAE201659D300ECF803 /* SmogInfo.app */,
+				F4442CFE2020F9F100D7D8A0 /* SmogInfoTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -182,6 +234,7 @@
 		F4B30BC520166AFF00ECF803 /* Smog */ = {
 			isa = PBXGroup;
 			children = (
+				F4162BB5202077660040C576 /* Chart */,
 				F4162BA0201C65480040C576 /* Common */,
 				F4162B9D201BBF520040C576 /* MeasurementPoint */,
 				F4162B9C201BBEF50040C576 /* Station */,
@@ -193,6 +246,7 @@
 			isa = PBXGroup;
 			children = (
 				F4B30BCE20168B1400ECF803 /* Alamofire.framework */,
+				F4162BBA202077660040C576 /* Charts.framework */,
 				F4B30BD020168B1400ECF803 /* Pods_SmogInfo.framework */,
 			);
 			name = Products;
@@ -201,6 +255,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		F4442CFD2020F9F100D7D8A0 /* SmogInfoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F4442D0A2020F9F200D7D8A0 /* Build configuration list for PBXNativeTarget "SmogInfoTests" */;
+			buildPhases = (
+				F4442CFA2020F9F100D7D8A0 /* Sources */,
+				F4442CFB2020F9F100D7D8A0 /* Frameworks */,
+				F4442CFC2020F9F100D7D8A0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F4442D042020F9F200D7D8A0 /* PBXTargetDependency */,
+			);
+			name = SmogInfoTests;
+			productName = SmogInfoTests;
+			productReference = F4442CFE2020F9F100D7D8A0 /* SmogInfoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		F4B30BAD201659D300ECF803 /* SmogInfo */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = F4B30BC0201659D300ECF803 /* Build configuration list for PBXNativeTarget "SmogInfo" */;
@@ -231,6 +303,11 @@
 				LastUpgradeCheck = 0920;
 				ORGANIZATIONNAME = cookieIT;
 				TargetAttributes = {
+					F4442CFD2020F9F100D7D8A0 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = F4B30BAD201659D300ECF803;
+					};
 					F4B30BAD201659D300ECF803 = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
@@ -257,11 +334,19 @@
 			projectRoot = "";
 			targets = (
 				F4B30BAD201659D300ECF803 /* SmogInfo */,
+				F4442CFD2020F9F100D7D8A0 /* SmogInfoTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
+		F4162BBA202077660040C576 /* Charts.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Charts.framework;
+			remoteRef = F4162BB9202077660040C576 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		F4B30BCE20168B1400ECF803 /* Alamofire.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
@@ -279,6 +364,13 @@
 /* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
+		F4442CFC2020F9F100D7D8A0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F4B30BAC201659D300ECF803 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -303,10 +395,12 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-SmogInfo/Pods-SmogInfo-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Charts/Charts.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Charts.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -349,27 +443,46 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		F4442CFA2020F9F100D7D8A0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F4442D012020F9F200D7D8A0 /* SmogInfoTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F4B30BAA201659D300ECF803 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				F4B30BB4201659D300ECF803 /* StationViewController.swift in Sources */,
 				F4162BB3201F97730040C576 /* SensorDataDTO.swift in Sources */,
+				F42C1565202123BE00D1D745 /* DateValueFormatter.swift in Sources */,
 				F4162BAE201C8B2C0040C576 /* SmogLevelDTO.swift in Sources */,
 				F4162B9F201BBFB20040C576 /* MeasurementPointViewController.swift in Sources */,
 				F4162B8D201BB21F0040C576 /* StationTableViewCell.swift in Sources */,
 				F4162BB0201C8B760040C576 /* LevelDTO.swift in Sources */,
+				F4162BBE202079600040C576 /* ValueDataDTO.swift in Sources */,
 				F4162BA6201C76210040C576 /* MeasurementPointDTO.swift in Sources */,
 				F4B30BB2201659D300ECF803 /* AppDelegate.swift in Sources */,
 				F4162BA4201C6C010040C576 /* IdentifiableDTO.swift in Sources */,
 				F4162BA8201C78A40040C576 /* ParamDTO.swift in Sources */,
 				F4162BAB201C7CD60040C576 /* MeasurementPointTableViewCell.swift in Sources */,
+				F42C1560202108CD00D1D745 /* BarChartViewController.swift in Sources */,
 				F4B30BD72017BDE600ECF803 /* StationDTO.swift in Sources */,
 				F4B30BC720166B8500ECF803 /* SmogRequest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F4442D042020F9F200D7D8A0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F4B30BAD201659D300ECF803 /* SmogInfo */;
+			targetProxy = F4442D032020F9F200D7D8A0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		F4B30BB5201659D300ECF803 /* Main.storyboard */ = {
@@ -391,6 +504,38 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		F4442D052020F9F200D7D8A0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3WX8N7V925;
+				INFOPLIST_FILE = SmogInfoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = pl.cookieIT.smogInfo.SmogInfoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SmogInfo.app/SmogInfo";
+			};
+			name = Debug;
+		};
+		F4442D062020F9F200D7D8A0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3WX8N7V925;
+				INFOPLIST_FILE = SmogInfoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = pl.cookieIT.smogInfo.SmogInfoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SmogInfo.app/SmogInfo";
+			};
+			name = Release;
+		};
 		F4B30BBE201659D300ECF803 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -533,6 +678,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		F4442D0A2020F9F200D7D8A0 /* Build configuration list for PBXNativeTarget "SmogInfoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F4442D052020F9F200D7D8A0 /* Debug */,
+				F4442D062020F9F200D7D8A0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		F4B30BA9201659D300ECF803 /* Build configuration list for PBXProject "SmogInfo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

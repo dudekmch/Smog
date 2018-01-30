@@ -82,11 +82,42 @@
                     </view>
                     <connections>
                         <outlet property="tableView" destination="Tbc-HL-T2D" id="ovJ-jM-Dxd"/>
+                        <segue destination="SPE-jn-HZq" kind="show" identifier="ShowChartSegue" id="IAy-yV-ysh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ro8-B4-P8h" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2024.8" y="162.3688155922039"/>
+        </scene>
+        <!--Bar Chart View Controller-->
+        <scene sceneID="d7S-O0-7bX">
+            <objects>
+                <viewController id="SPE-jn-HZq" customClass="BarChartViewController" customModule="SmogInfo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="faj-8v-ys1">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rzo-Df-BsD" customClass="BarChartView" customModule="Charts">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Rzo-Df-BsD" firstAttribute="leading" secondItem="YhB-Jv-8yc" secondAttribute="leading" id="4cG-xs-Agp"/>
+                            <constraint firstItem="Rzo-Df-BsD" firstAttribute="top" secondItem="YhB-Jv-8yc" secondAttribute="top" id="JCR-GU-iLJ"/>
+                            <constraint firstItem="YhB-Jv-8yc" firstAttribute="trailing" secondItem="Rzo-Df-BsD" secondAttribute="trailing" id="Top-jz-Vxc"/>
+                            <constraint firstItem="YhB-Jv-8yc" firstAttribute="bottom" secondItem="Rzo-Df-BsD" secondAttribute="bottom" id="rsd-I6-N6e"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="YhB-Jv-8yc"/>
+                    </view>
+                    <connections>
+                        <outlet property="barChartView" destination="Rzo-Df-BsD" id="UKV-Ky-J2c"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sR6-dB-ia3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3178" y="164"/>
         </scene>
     </scenes>
 </document>

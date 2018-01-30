@@ -24,6 +24,7 @@ class MeasurementPointViewController: UIViewController {
     let coSensorKey = "CO"
     let coValueUnit = "ug/m3"
     let generalValueUnit = "mg/m3"
+    let showChartSegueIdentifire = "ShowChartSegue"
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -83,7 +84,7 @@ class MeasurementPointViewController: UIViewController {
     }
 
     fileprivate func removeEmptyValueFrom(data: SensorDataDTO) -> SensorDataDTO {
-        var filtredValues = [SensorDataDTO.ValueDTO]()
+        var filtredValues = [ValueDataDTO]()
         if var valuesForPoint = data.values {
             filtredValues = valuesForPoint.filter({ (pointValue) -> Bool in
                 pointValue.value != nil
@@ -150,5 +151,21 @@ extension MeasurementPointViewController: UITableViewDataSource, UITableViewDele
     fileprivate func prepareCellWithOutValue(_ cell: MeasurementPointTableViewCell, _ indexPath: IndexPath) {
         cell.setDataMeasurementPoint(with: measurementPointDTOs[indexPath.row].id, name: measurementPointDTOs[indexPath.row].param.paramName, formula: measurementPointDTOs[indexPath.row].param.paramFormula)
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: showChartSegueIdentifire, sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == showChartSegueIdentifire,
+            let destination = segue.destination as? BarChartViewController,
+            let pointIndex = tableView.indexPathForSelectedRow
+        {
+            let pointId = (tableView.cellForRow(at: pointIndex) as! MeasurementPointTableViewCell).pointId
+            destination.setDataForChart(data: (valuesFromMeasurementPointSensors[pointId]?.values)!)
+        }
+    }
 
+
+    
 }

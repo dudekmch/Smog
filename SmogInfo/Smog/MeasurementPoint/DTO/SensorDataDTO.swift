@@ -10,10 +10,6 @@ import Foundation
 
 struct SensorDataDTO: Decodable {
     let key : String
-    let values : [ValueDTO]?
+    let values : [ValueDataDTO]?
     
-    struct ValueDTO: Decodable {
-        let date : String
-        let value: Double?
-    }
 }
